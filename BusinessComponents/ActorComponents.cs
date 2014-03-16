@@ -58,7 +58,34 @@ namespace BusinessComponents
 
         public static void AddActorRate(Guid myActorID, int value, Guid myUserID)
         {
+            var uselessUser = new User();
             var newRate = new ActorRate(myActorID, value, myUserID);
+
+            Actor myActor = (Actor)Logic.Read(uselessActor.GetType(), myActorID);
+            User myUser = (User)Logic.Read(uselessUser.GetType(), myUserID);
+
+            var newRatesArray = myActor.Rates;           
+            Array.Resize(ref newRatesArray, myActor.Rates.Length + 1);
+            newRatesArray[newRatesArray.Length - 1] = newRate;
+            myActor.Rates = newRatesArray;
+
+            var newUserRatesArray = myUser.UserActorsRates;
+            Array.Resize(ref newUserRatesArray, newUserRatesArray.Length + 1);
+            newUserRatesArray[newUserRatesArray.Length - 1] = newRate;
+            myUser.UserActorsRates = newUserRatesArray;
+
+            int Rate = 0;
+            int RatesCount = 0;
+            foreach(ActorRate item in myActor.Rates)
+            {
+                Rate += item.Value;
+                RatesCount += 1;
+            }
+            myActor.Rate = Rate / RatesCount;
+
+            Logic.Update(myActor, myActorID);
+            Logic.Update(myUser, myUserID);
+
         }
 
 

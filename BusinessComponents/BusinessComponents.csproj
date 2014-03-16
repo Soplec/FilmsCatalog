@@ -40,10 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActorComponents.cs" />
-    <Compile Include="ActorRateComponents.cs" />
     <Compile Include="CountryComponents.cs" />
     <Compile Include="FilmComponents.cs" />
-    <Compile Include="FilmRateComponents.cs" />
     <Compile Include="FimTypeComponents.cs" />
     <Compile Include="GenreComponents.cs" />
     <Compile Include="ModeratorComponents.cs" />

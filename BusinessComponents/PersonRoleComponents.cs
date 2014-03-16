@@ -3,10 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAcessLayer;
+using Entities;
 
 namespace BusinessComponents
 {
     class PersonRoleComponents
     {
+        public static void AddPersonRole(string roleName, Guid ID)
+        {
+            var myPR = new PersonRole(roleName, ID);
+            var PRList = Logic.ReadAll(myPR.GetType());
+            bool consistPR = false;
+
+            foreach (Genre item in PRList)
+            {
+                if (item.Name == roleName)
+                    consistPR = true;
+            }
+
+            if (!consistPR)
+            {
+                Logic.Create(myPR, ID);
+            }
+
+        }
     }
 }

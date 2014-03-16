@@ -10,6 +10,7 @@ namespace Entities
     public class Film
     {
         public string Name { get; set; }
+        public string Description { get; set; }
         public int ReleaseYear { get; set; }
         public int DiscsNumber { get; set; }
         public Guid ID { get; set; }
@@ -20,13 +21,16 @@ namespace Entities
         public Guid[] CountryesID { get; set; }
         public Guid[] ActorsID { get; set; }
 
+        public Guid[] PersonsID { get; set; }
+
         public Film()
         {
 
         }
-        public Film(string myName, int myReleaseYear, int myDiscsNumber, Guid myGuid, FilmType[] myFilmTypes, Genre[] myGenres, Guid[] myCountryesID, Guid[] myActorsID)
+        public Film(string myName, string myDescription, int myReleaseYear, int myDiscsNumber, Guid myGuid, FilmType[] myFilmTypes, Genre[] myGenres, Guid[] myCountryesID, Guid[] myActorsID)
         {
             Name = myName;
+            Description = myDescription;
             ReleaseYear = myReleaseYear;
             DiscsNumber = myDiscsNumber;
             ID = myGuid;

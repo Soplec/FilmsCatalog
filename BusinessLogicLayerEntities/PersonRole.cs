@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 namespace Entities
 {
     [Serializable]
-    class PersonRole
+    public class PersonRole
     {
         public Guid RoleID { get; set; }
         public string Name { get; set; }
 
-        public PersonRole(Guid myRoleID, string myName)
+        public PersonRole(string myName, Guid myRoleID)
         {
             RoleID = myRoleID;
             Name = myName;
