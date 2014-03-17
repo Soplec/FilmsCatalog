@@ -8,9 +8,9 @@ using Entities;
 
 namespace BusinessComponents
 {
-    class FilmComponents
+    public static class FilmComponents
     {
-        private static Film uselessFilm;
+        private static Film uselessFilm = new Film();
 
         public static void AddFilm(string myName, string myDescription, int myReleaseYear, int myDiscsNumber, Guid myGuid, FilmType[] myFilmTypes, Genre[] myGenres, Guid[] myCountryesID, Guid[] myActorsID)
         {

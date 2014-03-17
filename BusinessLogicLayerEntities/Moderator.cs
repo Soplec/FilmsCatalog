@@ -12,6 +12,10 @@ namespace Entities
         Film[] AddedFilms { get; set; }
         Film[] DeletedFilms { get; set; }
 
+        public Moderator()
+        {
+
+        }
         public Moderator(Guid myID, string myName, string myPassword)
         {
             ID = myID;

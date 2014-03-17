@@ -8,9 +8,9 @@ using Entities;
 
 namespace BusinessComponents
 {
-    class ModeratorComponents
+    public static class ModeratorComponents
     {
-        private static Moderator uselessModerator;
+        private static Moderator uselessModerator = new Moderator();
 
         public static void AddModerator(Guid myID, string myName, string password)
         {

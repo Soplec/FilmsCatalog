@@ -9,9 +9,9 @@ using DataAcessLayer;
 
 namespace BusinessComponents
 {
-    public class PersonComponents
+    public static class PersonComponents
     {
-        private static Person uselessPerson;
+        private static Person uselessPerson = new Person();
 
         public static void AddPerson(string myName, Guid myID, Country myCountry)
         {

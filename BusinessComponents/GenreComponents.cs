@@ -8,7 +8,7 @@ using DataAcessLayer;
 
 namespace BusinessComponents
 {
-    class GenreComponents
+    public static class GenreComponents
     {
         public static void AddGenre(string genreName, Guid ID)
         {

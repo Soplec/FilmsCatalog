@@ -8,9 +8,9 @@ using Entities;
 
 namespace BusinessComponents
 {
-    class ActorComponents
+    public static class ActorComponents
     {
-        private static Actor uselessActor;
+        private static Actor uselessActor = new Actor();
 
         public static void AddActor(string myName, Guid myID, Country myCountry)
         {

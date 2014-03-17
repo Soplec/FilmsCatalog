@@ -8,7 +8,7 @@ using Entities;
 
 namespace BusinessComponents
 {
-    class PersonRoleComponents
+    public static class PersonRoleComponents
     {
         public static void AddPersonRole(string roleName, Guid ID)
         {

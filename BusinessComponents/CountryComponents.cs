@@ -7,7 +7,7 @@ using DataAcessLayer;
 using Entities;
 namespace BusinessComponents
 {
-    class CountryComponents
+    public static class CountryComponents
     {
         public static void AddCountry(string countryName, Guid ID)
         {

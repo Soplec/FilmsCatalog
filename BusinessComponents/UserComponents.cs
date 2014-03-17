@@ -8,9 +8,9 @@ using Entities;
 
 namespace BusinessComponents
 {
-    public class UserComponents
+    public static class UserComponents
     {
-        private static User uselessUser;
+        private static User uselessUser = new User();
 
         public static void AddUser(Guid myID, string myName, string password)
         {
