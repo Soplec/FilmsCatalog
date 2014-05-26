@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
-namespace DataAcessLayer
+namespace BinaryDAL
 {
     static internal class BinaryFile
     {

@@ -55,10 +55,13 @@
       <Project>{76ea9e50-9151-46e1-b300-27811cf457ec}</Project>
       <Name>Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataAcessLayer\DataAcessLayer.csproj">
+    <ProjectReference Include="..\DataAcessLayer\BinaryDAL.csproj">
       <Project>{2fd616f5-5c19-46b0-abd0-d32a6b65d805}</Project>
-      <Name>DataAcessLayer</Name>
+      <Name>BinaryDAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

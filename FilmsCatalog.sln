@@ -7,9 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplicationTest", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "BusinessLogicLayerEntities\Entities.csproj", "{76EA9E50-9151-46E1-B300-27811CF457EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAcessLayer", "DataAcessLayer\DataAcessLayer.csproj", "{2FD616F5-5C19-46B0-ABD0-D32A6B65D805}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryDAL", "DataAcessLayer\BinaryDAL.csproj", "{2FD616F5-5C19-46B0-ABD0-D32A6B65D805}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessComponents", "BusinessComponents\BusinessComponents.csproj", "{55C6D8C2-0D06-481E-9E1E-D309E489E448}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoDAL", "AdoDAL\AdoDAL.csproj", "{B8D8D514-14D5-4224-AD08-E7FA06873742}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{55C6D8C2-0D06-481E-9E1E-D309E489E448}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55C6D8C2-0D06-481E-9E1E-D309E489E448}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55C6D8C2-0D06-481E-9E1E-D309E489E448}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8D8D514-14D5-4224-AD08-E7FA06873742}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8D8D514-14D5-4224-AD08-E7FA06873742}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8D8D514-14D5-4224-AD08-E7FA06873742}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8D8D514-14D5-4224-AD08-E7FA06873742}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

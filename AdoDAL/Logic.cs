@@ -9,7 +9,7 @@ using System.Configuration;
 
 namespace AdoDAL
 {
-    public class Logic
+    static public class Logic
     {
 
         public static void Create(System.Object myObj, Guid myObjGuid)
@@ -23,15 +23,6 @@ namespace AdoDAL
                 param.Value = myObj;
                 param.SqlDbType = SqlDbType.Variant;
                 cmd.Parameters.Add(param);
-                try
-                {
-                    cmd.ExecuteNonQuery();
-                }
-                catch
-                {
-                    return;
-                }
-
             }
         }
         
@@ -70,8 +61,6 @@ namespace AdoDAL
                 param.Value = myObjGuid;
                 param.SqlDbType = SqlDbType.UniqueIdentifier;
                 cmd.Parameters.Add(param);
-
-
                 using (SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection))
                 {
                     if (dr.HasRows)
@@ -111,7 +100,6 @@ namespace AdoDAL
             using (new SqlConnection())
             {
 
-
                 SqlCommand cmd = new SqlCommand("Delete from " + myType.ToString() +
                     " where ID = @ID", new SqlConnection());
 
@@ -120,15 +108,6 @@ namespace AdoDAL
                 param.Value = myGuid;
                 param.SqlDbType = SqlDbType.UniqueIdentifier;
                 cmd.Parameters.Add(param);
-
-                try
-                {
-                    cmd.ExecuteNonQuery();
-                }
-                catch
-                {
-                    return;
-                }
             }
         }
     }

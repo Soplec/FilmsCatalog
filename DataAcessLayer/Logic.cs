@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAcessLayer
+namespace BinaryDAL
 {
     static public class Logic
     {

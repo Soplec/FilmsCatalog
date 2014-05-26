@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DB0DDBB6-524B-4365-B0A7-D56F4E4ABEBD}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{2FD616F5-5C19-46B0-ABD0-D32A6B65D805}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConsoleApplicationTest</RootNamespace>
-    <AssemblyName>ConsoleApplicationTest</AssemblyName>
+    <RootNamespace>BinaryDAL</RootNamespace>
+    <AssemblyName>DataAcessLayer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,29 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="BinaryFile.cs" />
+    <Compile Include="Logic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AdoDAL\AdoDAL.csproj">
-      <Project>{b8d8d514-14d5-4224-ad08-e7fa06873742}</Project>
-      <Name>AdoDAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BusinessComponents\BusinessComponents.csproj">
-      <Project>{55c6d8c2-0d06-481e-9e1e-d309e489e448}</Project>
-      <Name>BusinessComponents</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BusinessLogicLayerEntities\Entities.csproj">
-      <Project>{76ea9e50-9151-46e1-b300-27811cf457ec}</Project>
-      <Name>Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataAcessLayer\BinaryDAL.csproj">
-      <Project>{2fd616f5-5c19-46b0-abd0-d32a6b65d805}</Project>
-      <Name>BinaryDAL</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
