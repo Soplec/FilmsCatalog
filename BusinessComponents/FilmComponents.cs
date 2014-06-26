@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using BinaryDAL;
 using Entities;
 
+//ololololo oleg dno
 namespace BusinessComponents
 {
     public static class FilmComponents
